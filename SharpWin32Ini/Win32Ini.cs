@@ -9,6 +9,7 @@ using System.Text;
 
 public class Win32Ini
 {
+#nullable enable
     [DllImport("kernel32", CharSet = CharSet.Unicode)]
     static extern int GetPrivateProfileString(string Section, string Key, string Default, StringBuilder RetVal, int Size, string FilePath);
     [DllImport("kernel32", CharSet = CharSet.Unicode)]
