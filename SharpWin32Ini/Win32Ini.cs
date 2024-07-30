@@ -7,6 +7,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 
+namespace System.Windows;
+
 public class Win32Ini
 {
 #nullable enable

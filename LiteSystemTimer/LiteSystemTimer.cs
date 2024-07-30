@@ -6,6 +6,8 @@ using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 
+namespace System;
+
 public class LiteSystemTimer
 {
     public static event PropertyChangedEventHandler PropertyChanged;

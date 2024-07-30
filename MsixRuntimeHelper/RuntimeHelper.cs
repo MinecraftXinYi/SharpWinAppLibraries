@@ -1,6 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
 
+namespace Windows;
+
 public static class RuntimeHelper
 {
 #nullable enable
