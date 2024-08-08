@@ -1,8 +1,7 @@
 ﻿//C# Lite System Timer Library
-//Version: 1.1
+//Version: 1.5
 //This C# code is copied from https://github.com/IVSoftware/winui-3-system-timer
 
-using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 
@@ -10,41 +9,30 @@ namespace System;
 
 public class LiteSystemTimer
 {
-    public static event PropertyChangedEventHandler PropertyChanged;
-    static DateTime _second = DateTime.MinValue;
-    static bool _dispose = false;
+    private DateTime _second = DateTime.MinValue;
+    private bool _dispose = false;
 
     public LiteSystemTimer()
     {
-        Task.Run(async () =>
-        {
-            while (!_dispose)
-            {
-                PushDT(DateTime.Now);
-                await Task.Delay(100);
-            }
-        });
+        Task.Run(PushDateTimeTask);
     }
 
-    static LiteSystemTimer()
+    private async Task PushDateTimeTask()
     {
-        Task.Run(async () =>
+        while (!_dispose)
         {
-            while (!_dispose)
-            {
-                PushDT(DateTime.Now);
-                await Task.Delay(100);
-            }
-        });
+            PushDateTime(DateTime.Now);
+            await Task.Delay(100);
+        }
     }
 
-    private static void PushDT(DateTime now)
+    private void PushDateTime(DateTime now)
     {
         // Using a 'now' that doesn't change within this method:
         Second = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second, now.Kind);
     }
 
-    public static DateTime Second
+    public DateTime Second
     {
         get => _second;
         set
@@ -57,13 +45,13 @@ public class LiteSystemTimer
         }
     }
 
-    public static void Dispose()
-    {
-        _dispose = true;
-    }
+    public event PropertyChangedEventHandler PropertyChanged;
 
-    public static void UnDispose()
+    public void Dispose() => _dispose = true;
+
+    public void Repose()
     {
         _dispose = false;
+        Task.Run(PushDateTimeTask);
     }
 }
