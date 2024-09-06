@@ -1,6 +1,6 @@
-﻿namespace Win32.Constants;
+﻿namespace Win32;
 
-public static class DwmBBFlags
+public static partial class Win32Const
 {
     public const uint DWM_BB_ENABLE = 0x00000001;
     public const uint DWM_BB_BLURREGION = 0x00000002;

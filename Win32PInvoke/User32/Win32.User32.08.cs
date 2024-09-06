@@ -3,8 +3,6 @@ using System.Runtime.InteropServices;
 
 namespace Win32;
 
-using Structs;
-
 public static partial class User32
 {
 #pragma warning disable CA1401
