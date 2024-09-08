@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharpWin32Ini", "SharpWin32Ini\SharpWin32Ini.csproj", "{83F126A6-F0E8-42C1-A497-5F44C3014CA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsixRuntimeHelper", "MsixRuntimeHelper\MsixRuntimeHelper.csproj", "{9267930B-DA0D-4EBF-A158-A710EAAF1E99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppxRuntimeHelper", "AppxRuntimeHelper\AppxRuntimeHelper.csproj", "{9267930B-DA0D-4EBF-A158-A710EAAF1E99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win32PInvoke", "Win32PInvoke\Win32PInvoke.csproj", "{11090DB7-58B0-4C33-AF4E-C77CB3685848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win32PInvoke", "Win32PInvoke\Win32PInvoke.csproj", "{11090DB7-58B0-4C33-AF4E-C77CB3685848}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
