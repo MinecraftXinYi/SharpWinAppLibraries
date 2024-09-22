@@ -14,7 +14,7 @@ public static partial class User32
     public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, int uFlags);
 }
 
-//Packaged Classes
+//Packaged Methods
 public static partial class User32Packaged
 {
     public static void SetWindowSizeByScalingFactor(IntPtr hWnd, int width, int height)

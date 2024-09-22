@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace Win32;
 
-//Native Win32 Classes
+//Native Win32 Methods
 public static partial class User32
 {
 #pragma warning disable CA1401
@@ -20,7 +20,7 @@ public static partial class User32
     public static extern IntPtr SetWindowLongPtr64(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 }
 
-//Packaged Classes
+//Packaged Methods
 public static partial class User32Packaged
 {
     public static IntPtr GetWindowLongPtr(IntPtr hWnd, int nIndex)

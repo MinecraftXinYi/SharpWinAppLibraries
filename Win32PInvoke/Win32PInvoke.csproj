@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <RootNamespace>Win32</RootNamespace>
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
